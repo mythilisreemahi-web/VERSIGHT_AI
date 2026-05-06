@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #4f46e5; /* Indigo 600 */
+  --color-brand-hover: #4338ca;
+  --color-surface: #f8fafc; /* Slate 50 */
+  --color-surface-white: #ffffff;
+  --color-border: #e2e8f0; /* Slate 200 */
+  --color-text-main: #0f172a; /* Slate 900 */
+  --color-text-muted: #64748b; /* Slate 500 */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-surface)] text-[var(--color-text-main)] font-sans antialiased;
+  }
+}
+
+.workspace-grid {
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.markdown-body h1 { @apply text-2xl font-semibold mb-4 text-[var(--color-brand)]; }
+.markdown-body h2 { @apply text-lg font-bold mb-2 text-slate-800 border-b border-slate-100 pb-1; }
+.markdown-body p { @apply mb-4 leading-relaxed text-slate-600 text-sm; }
+.markdown-body ul { @apply list-disc pl-6 mb-4 text-slate-600 text-sm; }
+.markdown-body li { @apply mb-1; }
+.markdown-body strong { @apply text-slate-900 font-semibold; }
+
